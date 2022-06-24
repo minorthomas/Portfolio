@@ -1,0 +1,29 @@
+*::first-letter {
+    text-transform: uppercase;
+}
+
+* {
+    font-family: 'Monda', sans-serif;
+    ;
+}
+
+::-webkit-scrollbar {
+    width: 7px;
+    padding: 1px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: blue;
+    padding: 1px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: lightblue;
+    border-radius: 4px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    display: block;
+}
