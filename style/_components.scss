@@ -3,8 +3,10 @@
 }
 
 * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
     font-family: 'Monda', sans-serif;
-    ;
 }
 
 ::-webkit-scrollbar {
@@ -26,4 +28,82 @@ a {
     text-decoration: none;
     color: black;
     display: block;
+}
+
+li {
+    list-style: none;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+}
+
+//NAVBAR
+
+.header {
+    width: 100%;
+
+    &_navbar {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+
+        &_logo {
+
+            a {
+                display: flex;
+                flex-direction: row;
+
+                li {
+                    display: flex;
+                    align-items: center;
+                }
+            }
+
+        }
+
+        &_links {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+
+            &_menu {
+                color: red;
+                width: 30px;
+                height: 30px;
+            }
+
+            &_list {
+                display: none;
+                flex-direction: column;
+                justify-content: space-around;
+                background-color: red;
+                padding: 0.6em;
+                height: 10em;
+                text-align: center;
+
+                li {
+
+                    a {
+
+                        p {
+                            padding: 0.4em;
+
+                            &:hover {
+                                background-color: aqua;
+                            }
+                        }
+                    }
+
+                }
+
+                &_socials {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-around;
+                }
+            }
+        }
+    }
 }
