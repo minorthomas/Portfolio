@@ -55,13 +55,12 @@ button {
             a {
                 display: flex;
                 flex-direction: row;
+                align-items: center;
 
-                li {
-                    display: flex;
-                    align-items: center;
+                p {
+                    margin-top: 0.2em;
                 }
             }
-
         }
 
         &_button {

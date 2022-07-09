@@ -51,10 +51,10 @@ button {
 .header_navbar_logo a {
   display: flex;
   flex-direction: row;
-}
-.header_navbar_logo a li {
-  display: flex;
   align-items: center;
+}
+.header_navbar_logo a p {
+  margin-top: 0.2em;
 }
 .header_navbar_button {
   width: 30px;
