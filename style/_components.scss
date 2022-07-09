@@ -6,7 +6,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Monda', sans-serif;
+    font-family: 'Mukta', sans-serif;
 }
 
 ::-webkit-scrollbar {
@@ -47,7 +47,8 @@ button {
     &_navbar {
         display: flex;
         flex-direction: row;
-        justify-content: space-around;
+        justify-content: space-between;
+        margin: 0.3em 1em 0 1em;
 
         &_logo {
 
@@ -63,39 +64,50 @@ button {
 
         }
 
-        &_links {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-end;
+        &_button {
+            width: 30px;
+            height: 30px;
 
-            &_menu {
-                color: red;
-                width: 30px;
-                height: 30px;
+            svg {
+                height: 2em;
+                width: 2em;
+                cursor: pointer;
             }
+        }
+
+        &_links {
+            height: 0;
+            width: 100%;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: rgb(0, 0, 0);
+            background-color: rgba(0, 0, 0, 0.9);
+            overflow-x: hidden;
+            transition: 0.4s;
 
             &_list {
-                display: none;
+                display: flex;
                 flex-direction: column;
-                justify-content: space-around;
-                background-color: red;
-                padding: 0.6em;
-                height: 10em;
-                text-align: center;
+                align-items: center;
+                justify-content: center;
+                height: 100%;
+                gap: 1em;
 
                 li {
+                    width: 100%;
 
                     a {
+                        font-size: 1.5em;
+                        color: $lightgrey;
+                        text-align: center;
 
-                        p {
-                            padding: 0.4em;
-
-                            &:hover {
-                                background-color: aqua;
-                            }
+                        &:hover {
+                            background-color: $lightgrey;
+                            color: $black;
                         }
                     }
-
                 }
 
                 &_socials {
