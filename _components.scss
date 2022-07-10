@@ -48,7 +48,7 @@ button {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        margin: 0 1em 0 1em;
+        margin: 0.3em 1em 0 1em;
 
         &_logo {
 
@@ -67,10 +67,6 @@ button {
             width: 30px;
             height: 30px;
 
-            @include device-size(medium) {
-                display: none;
-            }
-
             svg {
                 height: 2em;
                 width: 2em;
@@ -85,7 +81,8 @@ button {
             z-index: 1;
             top: 0;
             left: 0;
-            background-color: rgba(0, 0, 0, 0.8);
+            background-color: rgb(0, 0, 0);
+            background-color: rgba(0, 0, 0, 0.9);
             overflow-x: hidden;
             transition: 0.4s;
 
@@ -97,17 +94,8 @@ button {
                 height: 100%;
                 gap: 1em;
 
-                @include device-size(medium) {
-                    flex-direction: row;
-                    justify-content: flex-end;
-                }
-
                 li {
                     width: 100%;
-
-                    @include device-size(medium) {
-                        width: inherit;
-                    }
 
                     a {
                         font-size: 1.5em;
@@ -118,13 +106,6 @@ button {
                             background-color: $lightgrey;
                             color: $black;
                         }
-
-                        @include device-size(medium) {
-                            font-size: 1em;
-                            color: $black;
-                            padding: 0.3em;
-                            border-radius: 0 0 0.2em 0.2em;
-                        }
                     }
                 }
 
@@ -132,37 +113,26 @@ button {
                     display: flex;
                     flex-direction: row;
                     justify-content: space-around;
-                    gap: 0.3em;
-
-                    @include device-size(medium) {
-                        justify-content: flex-end;
-                        margin-left: 3em;
-                    }
-
-                    li {
-                        a {
-                            padding: inherit;
-
-                            &:hover {
-                                background-color: transparent !important;
-                            }
-
-                            img {
-                                vertical-align: middle;
-                                width: 1.5em;
-                            }
-                        }
-
-
-                    }
                 }
             }
+        }
+    }
+}
 
-            @include device-size(medium) {
-                height: inherit;
-                background-color: rgba(0, 0, 0, 0);
-                position: static;
+.btn {
+    &:active {
+        &+.progress {
+            &>.progress__bar {
+                transform: scaleX(1);
             }
         }
+    }
+}
+
+.progress {
+    &__bar {
+        transform-origin: 0% 50%;
+        transform: scaleX(0);
+        transition: transform 1000ms;
     }
 }
