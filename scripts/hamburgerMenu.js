@@ -24,12 +24,16 @@ btn.addEventListener("click", function () {
         btn.setAttribute("active", "true");
         btn.style.zIndex = "2"
         btn.innerHTML = hamburgerMenuCross;
+
+        btn.style.marginTop = "1em";
     } else if (btnActive === "true") {
         navbarLinks.style.height = "0%"
 
         btn.setAttribute("active", "false");
         btn.innerHTML = hamburgerMenuLines;
         btn.style.zIndex = "0"
+
+        btn.style.marginTop = "0";
     } else {
         throw "Navbar attribute error: Active attribute not found";
     }

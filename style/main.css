@@ -24,6 +24,11 @@
   border-radius: 4px;
 }
 
+body {
+  max-width: 1200px;
+  margin: auto;
+}
+
 a {
   text-decoration: none;
   color: black;
@@ -136,7 +141,7 @@ button {
   padding: inherit;
 }
 .header_navbar_links_list_socials li a:hover {
-  background-color: transparent !important;
+  border-radius: 0.5em;
 }
 .header_navbar_links_list_socials li a img {
   vertical-align: middle;
