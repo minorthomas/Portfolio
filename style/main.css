@@ -51,7 +51,7 @@ button {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin: 0 1em 0 1em;
+  margin: 0.5em 1em 0 1em;
 }
 .header_navbar_logo a {
   display: flex;
@@ -92,12 +92,17 @@ button {
   align-items: center;
   justify-content: center;
   height: 100%;
-  gap: 1em;
+  gap: 3em;
 }
 @media only screen and (min-width: 768px) {
   .header_navbar_links_list {
     flex-direction: row;
     justify-content: flex-end;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .header_navbar_links_list {
+    gap: 5em;
   }
 }
 .header_navbar_links_list li {
@@ -124,6 +129,9 @@ button {
     padding: 0.3em;
     border-radius: 0 0 0.2em 0.2em;
   }
+  .header_navbar_links_list li a:hover {
+    background-color: transparent;
+  }
 }
 .header_navbar_links_list_socials {
   display: flex;
@@ -134,7 +142,12 @@ button {
 @media only screen and (min-width: 768px) {
   .header_navbar_links_list_socials {
     justify-content: flex-end;
-    margin-left: 3em;
+    margin-left: 8em;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .header_navbar_links_list_socials {
+    margin-left: 15em;
   }
 }
 .header_navbar_links_list_socials li a {

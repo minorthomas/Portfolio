@@ -53,7 +53,7 @@ button {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        margin: 0 1em 0 1em;
+        margin: 0.5em 1em 0 1em;
 
         &_logo {
 
@@ -100,11 +100,15 @@ button {
                 align-items: center;
                 justify-content: center;
                 height: 100%;
-                gap: 1em;
+                gap: 3em;
 
                 @include device-size(medium) {
                     flex-direction: row;
                     justify-content: flex-end;
+                }
+
+                @include device-size(large) {
+                    gap: 5em;
                 }
 
                 li {
@@ -129,6 +133,10 @@ button {
                             color: $black;
                             padding: 0.3em;
                             border-radius: 0 0 0.2em 0.2em;
+
+                            &:hover {
+                                background-color: transparent;
+                            }
                         }
                     }
                 }
@@ -141,7 +149,11 @@ button {
 
                     @include device-size(medium) {
                         justify-content: flex-end;
-                        margin-left: 3em;
+                        margin-left: 8em;
+                    }
+
+                    @include device-size(large) {
+                        margin-left: 15em;
                     }
 
                     li {
