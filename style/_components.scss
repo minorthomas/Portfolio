@@ -58,6 +58,7 @@ button {
         flex-direction: row;
         justify-content: space-between;
         margin: 0.5em 1em 0 1em;
+        box-shadow: 0px 2px 3px -2px rgba(0, 0, 0, 0.2);
 
         @include device-size(extra-large) {
             margin: inherit;
@@ -216,6 +217,13 @@ button {
     h2 {
         grid-area: title;
         margin: 0 1em;
+
+        &::after {
+            display: block;
+            content: "";
+            width: 3em;
+            border-bottom: 0.1em solid $lightprimary;
+        }
     }
 
     &_card:nth-child(2) {
@@ -235,53 +243,56 @@ button {
     }
 
 
-
-    &_card {
-        margin: 0 auto;
-        max-width: 26.25em;
-        border: solid 0.1em transparent;
-        box-shadow: 0px 0px 5px 0px rgba(47, 69, 98, 0.30);
-
-        div {
+    a {
+        .popular_projects_card {
             display: flex;
             flex-direction: column;
+            justify-content: space-between;
+            margin: 0 auto;
+            max-width: 26.25em;
+            border: solid 0.1em black;
+            border-radius: 0.5em;
             padding: 1em;
-            align-items: center;
+            background-color: rgb(248, 248, 248);
 
+            &_header {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
 
-            img {
-                width: 100%;
-                height: 12em;
-                object-fit: cover;
-                border-radius: 0.5em;
+                :nth-child(1) {
+                    width: 2em;
+                    height: 2em;
+                }
+
+                :nth-child(2) {
+                    width: 1.2em;
+                    height: 1.2em;
+                }
             }
 
-            h3 {
-                margin-top: 0.3em;
-                font-size: 1.5em;
-            }
-
-            span {
-                width: 50%;
-                height: 0.12em;
-                background: $gradient;
-                border-radius: 15%;
-                margin: 0 0 0.5em 0;
-            }
-
-            button {
+            &_content {
                 margin-top: 1em;
-                align-self: flex-start;
-                padding: 0.5em 3em;
-                background: $gradient;
-                color: $white;
-                border-radius: 2em;
-                transition: 0.2s;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
 
-                &:hover {
-                    transform: scale(1.05);
+                h3 {
+                    margin-bottom: 0.3em;
+                    font-size: 1.5em;
+                }
+            }
+
+            &_footer {
+                margin-top: 1em;
+
+                p {
+                    opacity: 0.8;
+                    font-size: 0.8em;
                 }
             }
         }
     }
+
 }

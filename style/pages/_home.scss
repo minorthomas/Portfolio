@@ -2,6 +2,17 @@
     margin: 2em 1em;
     max-width: 36em;
 
+    h1 {
+        font-size: 2em;
+
+        &::after {
+            display: block;
+            content: "";
+            width: 3em;
+            border-bottom: 0.1em solid $lightsecondary;
+        }
+    }
+
     @include device-size(medium) {
         margin: 5em 1em 0 1em;
     }

@@ -56,6 +56,7 @@ button {
   flex-direction: row;
   justify-content: space-between;
   margin: 0.5em 1em 0 1em;
+  box-shadow: 0px 2px 3px -2px rgba(0, 0, 0, 0.2);
 }
 @media only screen and (min-width: 1200px) {
   .header_navbar {
@@ -201,6 +202,12 @@ button {
   grid-area: title;
   margin: 0 1em;
 }
+.popular_projects h2::after {
+  display: block;
+  content: "";
+  width: 3em;
+  border-bottom: 0.1em solid #2F4562;
+}
 .popular_projects_card:nth-child(2) {
   border-radius: 0.5em 0.5em 0 0.5em;
 }
@@ -213,52 +220,61 @@ button {
 .popular_projects_card:nth-child(5) {
   border-radius: 0 0.5em 0.5em 0.5em;
 }
-.popular_projects_card {
-  margin: 0 auto;
-  max-width: 26.25em;
-  border: solid 0.1em transparent;
-  box-shadow: 0px 0px 5px 0px rgba(47, 69, 98, 0.3);
-}
-.popular_projects_card div {
+.popular_projects a .popular_projects_card {
   display: flex;
   flex-direction: column;
-  padding: 1em;
-  align-items: center;
-}
-.popular_projects_card div img {
-  width: 100%;
-  height: 12em;
-  -o-object-fit: cover;
-     object-fit: cover;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 26.25em;
+  border: solid 0.1em black;
   border-radius: 0.5em;
+  padding: 1em;
+  background-color: rgb(248, 248, 248);
 }
-.popular_projects_card div h3 {
-  margin-top: 0.3em;
+.popular_projects a .popular_projects_card_header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.popular_projects a .popular_projects_card_header :nth-child(1) {
+  width: 2em;
+  height: 2em;
+}
+.popular_projects a .popular_projects_card_header :nth-child(2) {
+  width: 1.2em;
+  height: 1.2em;
+}
+.popular_projects a .popular_projects_card_content {
+  margin-top: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.popular_projects a .popular_projects_card_content h3 {
+  margin-bottom: 0.3em;
   font-size: 1.5em;
 }
-.popular_projects_card div span {
-  width: 50%;
-  height: 0.12em;
-  background: linear-gradient(90deg, rgb(2, 0, 36) 0%, rgb(227, 101, 255) 0%, rgb(0, 101, 176) 50%, rgb(107, 230, 255) 100%);
-  border-radius: 15%;
-  margin: 0 0 0.5em 0;
-}
-.popular_projects_card div button {
+.popular_projects a .popular_projects_card_footer {
   margin-top: 1em;
-  align-self: flex-start;
-  padding: 0.5em 3em;
-  background: linear-gradient(90deg, rgb(2, 0, 36) 0%, rgb(227, 101, 255) 0%, rgb(0, 101, 176) 50%, rgb(107, 230, 255) 100%);
-  color: #FFFFFF;
-  border-radius: 2em;
-  transition: 0.2s;
 }
-.popular_projects_card div button:hover {
-  transform: scale(1.05);
+.popular_projects a .popular_projects_card_footer p {
+  opacity: 0.8;
+  font-size: 0.8em;
 }
 
 .welcome {
   margin: 2em 1em;
   max-width: 36em;
+}
+.welcome h1 {
+  font-size: 2em;
+}
+.welcome h1::after {
+  display: block;
+  content: "";
+  width: 3em;
+  border-bottom: 0.1em solid #353C51;
 }
 @media only screen and (min-width: 768px) {
   .welcome {
