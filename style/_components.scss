@@ -250,10 +250,10 @@ button {
             justify-content: space-between;
             margin: 0 auto;
             max-width: 26.25em;
-            border: solid 0.1em black;
+            border: solid 0.1em $black;
             border-radius: 0.5em;
             padding: 1em;
-            background-color: rgb(248, 248, 248);
+            background-color: $lightgrey;
 
             &_header {
                 display: flex;

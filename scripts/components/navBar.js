@@ -66,6 +66,7 @@ const displayHamburgerMenuCross = `
 btn.addEventListener("click", function () {
     const btnActive = btn.getAttribute("active");
 
+
     if (btnActive === "false") {
         navbarLinks.style.height = "100%";
 

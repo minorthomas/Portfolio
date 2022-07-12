@@ -129,12 +129,12 @@ button {
 }
 .header_navbar_links_list li a {
   font-size: 1.5em;
-  color: #c2c2c2;
+  color: #f8f8f8;
   text-align: center;
   font-weight: 600;
 }
 .header_navbar_links_list li a:hover {
-  background-color: #c2c2c2;
+  background-color: #f8f8f8;
   color: #000000;
 }
 @media only screen and (min-width: 768px) {
@@ -226,10 +226,10 @@ button {
   justify-content: space-between;
   margin: 0 auto;
   max-width: 26.25em;
-  border: solid 0.1em black;
+  border: solid 0.1em #000000;
   border-radius: 0.5em;
   padding: 1em;
-  background-color: rgb(248, 248, 248);
+  background-color: #f8f8f8;
 }
 .popular_projects a .popular_projects_card_header {
   display: flex;
@@ -299,4 +299,53 @@ button {
 }
 .welcome button:hover {
   transform: scale(1.05);
+}
+
+.technologies {
+  margin-top: 1em;
+  margin-bottom: 5em;
+}
+@media only screen and (min-width: 768px) {
+  .technologies {
+    margin-top: 6em;
+  }
+}
+.technologies h2 {
+  margin: 0 1em;
+}
+.technologies h2::after {
+  display: block;
+  content: "";
+  width: 3em;
+  border-bottom: 0.1em solid #353C51;
+}
+.technologies_list {
+  margin: 1em 2em 0 2em;
+}
+@media only screen and (min-width: 768px) {
+  .technologies_list {
+    margin: 1em 5em 0 5em;
+  }
+}
+.technologies_list_label {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.technologies_list_label label {
+  font-weight: 600;
+}
+.technologies_list_progress {
+  padding: 0.06em;
+  background: #f8f8f8;
+  border-radius: 0.5em;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25), 0 1px rgba(255, 255, 255, 0.08);
+}
+.technologies_list_progress_bar {
+  height: 1em;
+  border-radius: 0.5em;
+  background-image: linear-gradient(90deg, rgb(2, 0, 36) 0%, rgb(227, 101, 255) 0%, rgb(0, 101, 176) 50%, rgb(107, 230, 255) 100%);
+  transition: 2s smooth;
+  transition-property: width, background-color;
+  width: 1%;
 }/*# sourceMappingURL=main.css.map */
