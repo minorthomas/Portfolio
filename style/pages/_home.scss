@@ -1,0 +1,31 @@
+.welcome {
+    margin: 2em 1em;
+    max-width: 36em;
+
+    @include device-size(medium) {
+        margin: 5em 1em 0 1em;
+    }
+
+    p {
+        margin-top: 1em;
+        margin-left: 2em;
+    }
+
+    button {
+        margin-left: 4em;
+        margin-top: 1em;
+        align-self: flex-start;
+        padding: 0.5em 2em;
+        background: $gradient;
+        border-radius: 2em;
+        transition: 0.2s;
+
+        a {
+            color: $white;
+        }
+
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
+}

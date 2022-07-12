@@ -6,7 +6,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "Mukta", sans-serif;
+  font-family: "Poppins", sans-serif;
   color: #2F4562;
 }
 
@@ -16,25 +16,25 @@
 }
 
 ::-webkit-scrollbar-track {
-  background-color: blue;
   padding: 1px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: lightblue;
+  background-color: #2F4562;
   border-radius: 4px;
 }
 
 body {
   max-width: 1200px;
-  margin: auto;
   background-color: #FFFFFF;
+  margin: auto;
 }
 
 a {
   text-decoration: none;
   color: #2F4562;
   display: block;
+  cursor: pointer;
 }
 
 li {
@@ -44,6 +44,8 @@ li {
 button {
   background-color: transparent;
   border: none;
+  cursor: pointer;
+  font-weight: 600;
 }
 
 .header {
@@ -54,6 +56,16 @@ button {
   flex-direction: row;
   justify-content: space-between;
   margin: 0.5em 1em 0 1em;
+}
+@media only screen and (min-width: 1200px) {
+  .header_navbar {
+    margin: inherit;
+    margin-top: 0.5em;
+  }
+}
+.header_navbar_logo img {
+  width: 2.5em;
+  height: 2.5em;
 }
 .header_navbar_logo a {
   display: flex;
@@ -75,7 +87,6 @@ button {
 .header_navbar_button svg {
   height: 2em;
   width: 2em;
-  cursor: pointer;
 }
 .header_navbar_links {
   height: 0;
@@ -119,6 +130,7 @@ button {
   font-size: 1.5em;
   color: #c2c2c2;
   text-align: center;
+  font-weight: 600;
 }
 .header_navbar_links_list li a:hover {
   background-color: #c2c2c2;
@@ -179,18 +191,32 @@ button {
   .popular_projects {
     display: grid;
     grid-template-areas: "title title";
-    gap: inherit;
-    row-gap: 1em;
+    -moz-column-gap: 2em;
+         column-gap: 2em;
+    row-gap: 3em;
+    margin-top: 6em;
   }
 }
 .popular_projects h2 {
   grid-area: title;
+  margin: 0 1em;
+}
+.popular_projects_card:nth-child(2) {
+  border-radius: 0.5em 0.5em 0 0.5em;
+}
+.popular_projects_card:nth-child(3) {
+  border-radius: 0.5em 0.5em 0.5em 0;
+}
+.popular_projects_card:nth-child(4) {
+  border-radius: 0.5em 0 0.5em 0.5em;
+}
+.popular_projects_card:nth-child(5) {
+  border-radius: 0 0.5em 0.5em 0.5em;
 }
 .popular_projects_card {
   margin: 0 auto;
   max-width: 26.25em;
   border: solid 0.1em transparent;
-  border-radius: 1em 0 1em 0;
   box-shadow: 0px 0px 5px 0px rgba(47, 69, 98, 0.3);
 }
 .popular_projects_card div {
@@ -218,7 +244,7 @@ button {
   margin: 0 0 0.5em 0;
 }
 .popular_projects_card div button {
-  margin-top: 0.5em;
+  margin-top: 1em;
   align-self: flex-start;
   padding: 0.5em 3em;
   background: linear-gradient(90deg, rgb(2, 0, 36) 0%, rgb(227, 101, 255) 0%, rgb(0, 101, 176) 50%, rgb(107, 230, 255) 100%);
@@ -227,5 +253,34 @@ button {
   transition: 0.2s;
 }
 .popular_projects_card div button:hover {
+  transform: scale(1.05);
+}
+
+.welcome {
+  margin: 2em 1em;
+  max-width: 36em;
+}
+@media only screen and (min-width: 768px) {
+  .welcome {
+    margin: 5em 1em 0 1em;
+  }
+}
+.welcome p {
+  margin-top: 1em;
+  margin-left: 2em;
+}
+.welcome button {
+  margin-left: 4em;
+  margin-top: 1em;
+  align-self: flex-start;
+  padding: 0.5em 2em;
+  background: linear-gradient(90deg, rgb(2, 0, 36) 0%, rgb(227, 101, 255) 0%, rgb(0, 101, 176) 50%, rgb(107, 230, 255) 100%);
+  border-radius: 2em;
+  transition: 0.2s;
+}
+.welcome button a {
+  color: #FFFFFF;
+}
+.welcome button:hover {
   transform: scale(1.05);
 }/*# sourceMappingURL=main.css.map */
