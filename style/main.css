@@ -166,4 +166,54 @@ button {
     background-color: rgba(0, 0, 0, 0);
     position: static;
   }
+}
+
+.popular_projects {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+@media only screen and (min-width: 768px) {
+  .popular_projects {
+    display: grid;
+    grid-template-areas: "title title";
+    gap: inherit;
+    row-gap: 1em;
+  }
+}
+.popular_projects h2 {
+  grid-area: title;
+}
+.popular_projects_card {
+  margin: 0 auto;
+  max-width: 26.25em;
+}
+@media only screen and (min-width: 576px) {
+  .popular_projects_card {
+    border: solid 0.1em transparent;
+    border-radius: 1em 0 1em 0;
+    box-shadow: 0px 0px 4px 0px #000000;
+  }
+}
+.popular_projects_card div {
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+  align-items: center;
+}
+.popular_projects_card div img {
+  width: 100%;
+  height: 12em;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 0.5em;
+}
+.popular_projects_card div span {
+  width: 50%;
+  height: 0.2em;
+  background-color: aqua;
+  border-radius: 15%;
+}
+.popular_projects_card div button {
+  align-self: flex-start;
 }/*# sourceMappingURL=main.css.map */
