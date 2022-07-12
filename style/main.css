@@ -7,6 +7,7 @@
   margin: 0;
   box-sizing: border-box;
   font-family: "Mukta", sans-serif;
+  color: #2F4562;
 }
 
 ::-webkit-scrollbar {
@@ -27,11 +28,12 @@
 body {
   max-width: 1200px;
   margin: auto;
+  background-color: #FFFFFF;
 }
 
 a {
   text-decoration: none;
-  color: black;
+  color: #2F4562;
   display: block;
 }
 
@@ -125,9 +127,9 @@ button {
 @media only screen and (min-width: 768px) {
   .header_navbar_links_list li a {
     font-size: 1em;
-    color: #000000;
     padding: 0.3em;
     border-radius: 0 0 0.2em 0.2em;
+    color: #2F4562;
   }
   .header_navbar_links_list li a:hover {
     background-color: transparent;
@@ -187,13 +189,9 @@ button {
 .popular_projects_card {
   margin: 0 auto;
   max-width: 26.25em;
-}
-@media only screen and (min-width: 576px) {
-  .popular_projects_card {
-    border: solid 0.1em transparent;
-    border-radius: 1em 0 1em 0;
-    box-shadow: 0px 0px 4px 0px #000000;
-  }
+  border: solid 0.1em transparent;
+  border-radius: 1em 0 1em 0;
+  box-shadow: 0px 0px 5px 0px rgba(47, 69, 98, 0.3);
 }
 .popular_projects_card div {
   display: flex;
@@ -208,12 +206,26 @@ button {
      object-fit: cover;
   border-radius: 0.5em;
 }
+.popular_projects_card div h3 {
+  margin-top: 0.3em;
+  font-size: 1.5em;
+}
 .popular_projects_card div span {
   width: 50%;
-  height: 0.2em;
-  background-color: aqua;
+  height: 0.12em;
+  background: linear-gradient(90deg, rgb(2, 0, 36) 0%, rgb(227, 101, 255) 0%, rgb(0, 101, 176) 50%, rgb(107, 230, 255) 100%);
   border-radius: 15%;
+  margin: 0 0 0.5em 0;
 }
 .popular_projects_card div button {
+  margin-top: 0.5em;
   align-self: flex-start;
+  padding: 0.5em 3em;
+  background: linear-gradient(90deg, rgb(2, 0, 36) 0%, rgb(227, 101, 255) 0%, rgb(0, 101, 176) 50%, rgb(107, 230, 255) 100%);
+  color: #FFFFFF;
+  border-radius: 2em;
+  transition: 0.2s;
+}
+.popular_projects_card div button:hover {
+  transform: scale(1.05);
 }/*# sourceMappingURL=main.css.map */

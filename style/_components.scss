@@ -7,6 +7,7 @@
     margin: 0;
     box-sizing: border-box;
     font-family: 'Mukta', sans-serif;
+    color: $lightprimary;
 }
 
 ::-webkit-scrollbar {
@@ -27,11 +28,13 @@
 body {
     max-width: 1200px;
     margin: auto;
+    background-color: $white;
+
 }
 
 a {
     text-decoration: none;
-    color: black;
+    color: $lightprimary;
     display: block;
 }
 
@@ -130,9 +133,9 @@ button {
 
                         @include device-size(medium) {
                             font-size: 1em;
-                            color: $black;
                             padding: 0.3em;
                             border-radius: 0 0 0.2em 0.2em;
+                            color: $lightprimary;
 
                             &:hover {
                                 background-color: transparent;
@@ -205,18 +208,16 @@ button {
     &_card {
         margin: 0 auto;
         max-width: 26.25em;
-
-        @include device-size(small) {
-            border: solid 0.1em transparent;
-            border-radius: 1em 0 1em 0;
-            box-shadow: 0px 0px 4px 0px #000000;
-        }
+        border: solid 0.1em transparent;
+        border-radius: 1em 0 1em 0;
+        box-shadow: 0px 0px 5px 0px rgba(47, 69, 98, 0.30);
 
         div {
             display: flex;
             flex-direction: column;
             padding: 1em;
             align-items: center;
+
 
             img {
                 width: 100%;
@@ -225,15 +226,31 @@ button {
                 border-radius: 0.5em;
             }
 
+            h3 {
+                margin-top: 0.3em;
+                font-size: 1.5em;
+            }
+
             span {
                 width: 50%;
-                height: 0.2em;
-                background-color: aqua;
+                height: 0.12em;
+                background: $gradient;
                 border-radius: 15%;
+                margin: 0 0 0.5em 0;
             }
 
             button {
+                margin-top: 0.5em;
                 align-self: flex-start;
+                padding: 0.5em 3em;
+                background: $gradient;
+                color: $white;
+                border-radius: 2em;
+                transition: 0.2s;
+
+                &:hover {
+                    transform: scale(1.05);
+                }
             }
         }
     }
