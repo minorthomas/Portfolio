@@ -238,12 +238,10 @@ button {
   justify-content: space-between;
 }
 .popular_projects a .popular_projects_card_header :nth-child(1) {
-  width: 2em;
-  height: 2em;
+  width: 1.5em;
 }
 .popular_projects a .popular_projects_card_header :nth-child(2) {
   width: 1.2em;
-  height: 1.2em;
 }
 .popular_projects a .popular_projects_card_content {
   margin-top: 1em;

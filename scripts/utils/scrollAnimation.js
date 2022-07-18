@@ -7,20 +7,17 @@ function reveal() {
 
     let windowHeight = window.innerHeight;
     let elementTop = technologiesSection.getBoundingClientRect().top;
-    let elementVisible = 0;
+    let elementVisible = 20; //px
 
     const value1 = "65%";
     const value2 = "32%";
     const value3 = "98%";
 
     if (elementTop < windowHeight - elementVisible) {
-        progressBarHtml.style.transition = "2s";
         progressBarHtml.style.width = value1;
 
-        progressBarCss.style.transition = "2s";
         progressBarCss.style.width = value2;
 
-        progressBarReact.style.transition = "2s";
         progressBarReact.style.width = value3;
     }
 
